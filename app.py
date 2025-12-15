@@ -3,12 +3,14 @@ import requests
 from bs4 import BeautifulSoup
 import re
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import time
 
 # ===============================================
 # FLASK APP SETUP
 # ===============================================
 app = Flask(__name__)
+CORS(app)  # ✅ CORS ENABLED (THIS FIXES HTML ERROR)
 
 # ===============================================
 # CONFIGURATION
